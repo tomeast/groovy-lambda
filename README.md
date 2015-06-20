@@ -29,8 +29,10 @@ gvm install gradle
 - the handler should be in the form package.class::handler or example.GroovyLambdaExample::groovyHandler if you're using the example code
 - create and/or select an execution role, ie basic_lambda_execution
 - click the create lambda button
+![](https://github.com/tomeast/groovy-lambda/blob/master/step3.png)
 
 ### Step 4 - test
 - browse to the edit/test screen
 - enter input based off the handler, the example code expects an int
 - click the invoke button and verify that you get the respone you expect
+![](https://github.com/tomeast/groovy-lambda/blob/master/step4.png)
