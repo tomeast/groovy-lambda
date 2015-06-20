@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.codehaus.groovy:groovy-all:2.4.3')
+    compile('com.amazonaws:aws-lambda-java-core:1.0.0')
+    compile('com.amazonaws:aws-lambda-java-events:1.0.0')
+}
+
+task buildZip(type: Zip) {
+    from compileGroovy
+    from processResources              
+    into('lib') {
+        from configurations.runtime
+    }           
+}
+
+build.dependsOn buildZip
